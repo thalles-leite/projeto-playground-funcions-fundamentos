@@ -1,3 +1,4 @@
+/* eslint no-unused-expressions: ["error", { "allowTernary": true }] */
 // Desafio 1 - Crie a função compareTrue
 const compareTrue = (parametro1, parametro2) => parametro1 && parametro2;
 // Desafio 2 - Crie a função splitSentence
@@ -39,7 +40,19 @@ const calcAllAreas = (base, height, form) => {
   return retorno;
 };
 // Desafio 7 - Crie a função catAndMouse
-
+const catAndMouse = (mouse, cat1, cat2) => {
+  retorno = '';
+  const distCat1 = Math.abs(cat1 - mouse);
+  const distCat2 = Math.abs(cat2 - mouse);
+  if (distCat1 < distCat2) {
+    retorno = 'cat1';
+  } else if (distCat2 < distCat1) {
+    retorno = 'cat2';
+  } else {
+    retorno = 'os gatos trombam e o rato foge';
+  }
+  return retorno;
+};
 // Desafio 8 - Crie a função fizzBuzz
 
 // Desafio 9 - Crie a função encode e a função decode
