@@ -10,9 +10,21 @@ const footballPoints = (wins, ties) => {
   points += wins * 3 + ties;
   return points;
 };
-
 // Desafio 5 - Crie a função highestCount
+const highestCount = (arrayNum) => {
+  let maior = arrayNum[0];
 
+  let cont = 0;
+  for (let value of arrayNum) {
+    if (value > maior) {
+      maior = value;
+      cont = 1;
+    } else if (value === maior) {
+      cont += 1;
+    }
+  }
+  return cont;
+};
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 // Desafio 7 - Crie a função catAndMouse
