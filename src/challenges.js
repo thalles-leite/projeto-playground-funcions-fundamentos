@@ -1,9 +1,9 @@
 // Desafio 1 - Crie a função compareTrue
-compareTrue = (parametro1, parametro2) => parametro1 && parametro2;
+const compareTrue = (parametro1, parametro2) => parametro1 && parametro2;
 // Desafio 2 - Crie a função splitSentence
-
+const splitSentence = (parametro) => parametro.split(' ');
 // Desafio 3 - Crie a função concatName
-
+const concatName = (paramArray) => (`${paramArray[paramArray.length - 1]}, ${paramArray[0]}`);
 // Desafio 4 - Crie a função footballPoints
 
 // Desafio 5 - Crie a função highestCount
