@@ -5,6 +5,11 @@ const splitSentence = (parametro) => parametro.split(' ');
 // Desafio 3 - Crie a função concatName
 const concatName = (paramArray) => (`${paramArray[paramArray.length - 1]}, ${paramArray[0]}`);
 // Desafio 4 - Crie a função footballPoints
+const footballPoints = (wins, ties) => {
+  let points = 0;
+  points += wins * 3 + ties;
+  return points;
+};
 
 // Desafio 5 - Crie a função highestCount
 
