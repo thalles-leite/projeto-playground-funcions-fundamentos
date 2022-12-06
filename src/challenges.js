@@ -13,7 +13,6 @@ const footballPoints = (wins, ties) => {
 // Desafio 5 - Crie a função highestCount
 const highestCount = (arrayNum) => {
   let maior = arrayNum[0];
-
   let cont = 0;
   for (let value of arrayNum) {
     if (value > maior) {
@@ -26,7 +25,19 @@ const highestCount = (arrayNum) => {
   return cont;
 };
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-
+const calcTriangleArea = (base, height) => (base * height) / 2;
+const calcRectangleArea = (base, height) => base * height;
+const calcAllAreas = (base, height, form) => {
+  let retorno = '';
+  if (form === 'triângulo') {
+    retorno = `O valor da área do ${form} é de: ${calcTriangleArea(base, height)}`;
+  } else if (form === 'retângulo') {
+    retorno = `O valor da área do ${form} é de: ${calcRectangleArea(base, height)}`;
+  } else {
+    retorno = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+  return retorno;
+};
 // Desafio 7 - Crie a função catAndMouse
 
 // Desafio 8 - Crie a função fizzBuzz
