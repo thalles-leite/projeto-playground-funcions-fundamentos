@@ -54,6 +54,26 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return retorno;
 };
 // Desafio 8 - Crie a função fizzBuzz
+const fizzBuzz = (arrayNum) => {
+  const arrReturn = [];
+  for (let value of arrayNum) {
+    switch (value) {
+    // Se é multiplo de 15, consequentemente é multiplo de 3 e 5 * Tentativa de reduzir a complexidade =/.
+    case (value % 15 === 0):
+      arrReturn.push('fizzBuzz');
+      break;
+    case (value % 3 === 0):
+      arrReturn.push('fizz');
+      break;
+    case (value % 5 === 0):
+      arrReturn.push('buzz');
+      break;
+    default:
+      arrReturn.push('bug!');
+    }
+  }
+  return arrReturn;
+};
 
 // Desafio 9 - Crie a função encode e a função decode
 
