@@ -76,7 +76,36 @@ const fizzBuzz = (arrayNum) => { // Utilizei o switch case para conseguir reduzi
 };
 
 // Desafio 9 - Crie a função encode e a função decode
-
+const encode = (word) => {
+  const cripted = [];
+  const arrWord = word.split('');
+  const listCrip = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let value of arrWord) {
+    (listCrip[value] !== undefined) ? cripted.push(listCrip[value]) : cripted.push(value);
+  }
+  return (cripted.join(''));
+};
+const decode = (word) => {
+  const cripted = [];
+  const arrWord = word.split('');
+  const listCrip = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let value of arrWord) {
+    (listCrip[value] !== undefined) ? cripted.push(listCrip[value]) : cripted.push(value);
+  }
+  return (cripted.join(''));
+};
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
