@@ -54,12 +54,11 @@ const catAndMouse = (mouse, cat1, cat2) => {
   return retorno;
 };
 // Desafio 8 - Crie a função fizzBuzz
-const fizzBuzz = (arrayNum) => {
+const fizzBuzz = (arrayNum) => { // Utilizei o switch case para conseguir reduzir a complexidade cognitiva para 5.
   const arrReturn = [];
   for (let value of arrayNum) {
-    switch (value) {
-    // Se é multiplo de 15, consequentemente é multiplo de 3 e 5 * Tentativa de reduzir a complexidade =/.
-    case (value % 15 === 0):
+    switch (true) { // o switch case avalia a condição true e false dos cases...fonte: https://seanbarry.dev/posts/switch-true-pattern
+    case (value % 15 === 0): // 15 é o mínimo multiplo comum de 3 e 5, logo, para reduzir a complexidade cognitiva, utilizei o módulo de 15.
       arrReturn.push('fizzBuzz');
       break;
     case (value % 3 === 0):
@@ -68,8 +67,9 @@ const fizzBuzz = (arrayNum) => {
     case (value % 5 === 0):
       arrReturn.push('buzz');
       break;
-    default:
+    default: // seria default se todas as condições acima forem falsas.
       arrReturn.push('bug!');
+      break;
     }
   }
   return arrReturn;
