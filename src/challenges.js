@@ -107,7 +107,18 @@ const decode = (word) => {
   return (cripted.join(''));
 };
 // Desafio 10 - Crie a função techList
-
+const techList = (techP, nameP) => {
+  const arrReturn = [];
+  const ordTech = techP.sort();
+  for (let value of ordTech) {
+    const objeto = {
+      tech: value,
+      name: nameP,
+    };
+    arrReturn.push(objeto);
+  }
+  return arrReturn.sort();
+};
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => { }),
