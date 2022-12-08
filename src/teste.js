@@ -1,19 +1,10 @@
-const encode = (word) => {
-  const cripted = [];
-  const arrWord = word.split('');
-  const listCrip = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  for (let value of arrWord) {
-    console.log(value);
-    console.log(listCrip[value]);
-   (listCrip[value] !== undefined) ? cripted.push(listCrip[value]) : cripted.push(value);
-  }
-  return cripted;
-};
+const firstCondition = (lineA,lineB,lineC) => {
+  const lados = [lineA, lineB, lineC];
+}
 
-console.log(encode('olá, tudo bem?'));
+
+const triangleCheck = (lineA, lineB, lineC) => {
+  // condição 1 - linea < lineB + lineC && linea > modulo (lineB - lineC)
+  // ou
+  // linea < lineB + linec && lineb < linea + linec && linec < lineb+linea
+  };
