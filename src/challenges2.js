@@ -56,7 +56,16 @@ const sCondition = (lineA, lineB, lineC) => {
 };
 const triangleCheck = (lA, lB, lC) => fCondition(lA, lB, lC) && sCondition(lA, lB, lC);
 // Desafio 13 - Crie a função hydrate
-
+const hydrate = (pString) => {
+  let soma = 0;
+  let splitString = pString.split('');
+  console.log(splitString);
+  for (let value of splitString) {
+    if (parseInt(value, 10) >= 0 && parseInt(value, 10) <= 9) soma += parseInt(value, 10);
+  }
+  if (soma > 1) return (`${soma} copos de agua`);
+  return (`${soma} copo de água`);
+};
 /* eslint no-undef: 0 */
 
 // Não modifique essas linhas
