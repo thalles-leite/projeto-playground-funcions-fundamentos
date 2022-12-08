@@ -50,16 +50,11 @@ const fCondition = (lineA, lineB, lineC) => {
   if (lineC < lineB + lineA && lineC > Math.abs(lineB - lineA)) return true;
   return false;
 };
-
 const sCondition = (lineA, lineB, lineC) => {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) return true;
   return false;
 };
-
 const triangleCheck = (lA, lB, lC) => fCondition(lA, lB, lC) && sCondition(lA, lB, lC);
-
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13 - Crie a função hydrate
 
 /* eslint no-undef: 0 */
