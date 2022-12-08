@@ -63,7 +63,7 @@ const hydrate = (pString) => {
   for (let value of splitString) {
     if (parseInt(value, 10) >= 0 && parseInt(value, 10) <= 9) soma += parseInt(value, 10);
   }
-  if (soma > 1) return (`${soma} copos de agua`);
+  if (soma > 1) return (`${soma} copos de água`);
   return (`${soma} copo de água`);
 };
 /* eslint no-undef: 0 */
