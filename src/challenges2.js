@@ -1,46 +1,38 @@
 // Desafio 11 - Crie a função generatePhoneNumber
-const verifySize = (numPhone) => numPhone.length !== 11;
-const verifyNumbers = (numPhone) => {
-  for (let value of numPhone) {
-    if (value < 0 || value > 9) {
-      return true;
+const generatePhoneNumber  = (array) => {
+  let verificaNumero = array.length;
+  if(verificaNumero !== 11){
+    return 'Array com tamanho incorreto.';
+  }
+  for (let numeros of array) {
+    if(numeros > 9){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }else if(numeros < 0){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }    
+    for (let numeros2 in array) {
+      if (numeros === array[numeros2]) {
+        contador += 1;
+      }
+      if(contador >= 3){
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
     }
+    /*let contador = 1;
+    for (const numeros2 of array) {
+      if(numeros[index] === numeros2[index]){
+        contador +=1;
+      }
+      if(contador >= 3){
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }*/
   }
-  return false;
-};
-// eslint-disable-next-line sonarjs/cognitive-complexity
-const verifyRepet = (numPhone) => {
-  let cont = 0;
-  for (let value of numPhone) {
-    for (let valueToComp of numPhone) {
-      if (value === valueToComp) cont += 1;
-    }
-    if (cont > 2) return true;
-    cont = 0;
-  }
-  return false;
-};
-
-const verifyErro = (fverifySize, fvNumbs, fvRpt) => {
-  let erro;
-  if (fverifySize) erro = 'Array com tamanho incorreto.';
-  else if (fvNumbs || fvRpt) erro = 'não é possível gerar um número de telefone com esses valores';
-  return erro;
-};
-
-const generatePhoneNumber = (numPhone) => {
-  const erro = verifyErro(verifySize(numPhone), verifyNumbers(numPhone), verifyRepet(numPhone));
-  let ddd;
-  let finalNumber = [];
-  if (erro === undefined) {
-    ddd = numPhone.slice(0, 2).join('');
-    firstNumbers = numPhone.slice(2, 7).join('');
-    lastNumbers = numPhone.slice(7, 11).join('');
-    finalNumber.push('(', ddd, ') ', firstNumbers, '-', lastNumbers);
-    return finalNumber.join('');
-  }
-  return erro;
-};
+  let numberParenteses = array.splice(0, 2);
+  let numberPrimeiraParte = array.splice(0, 5);
+  let numberSegundaParte = array.splice(0, 8);
+  return `(${numberParenteses.join('')}) ${numberPrimeiraParte.join('')}-${numberSegundaParte.join('')}`;
+}
 
 // Desafio 12 -  Crie a função triangleCheck
 // eslint-disable-next-line complexity, sonarjs/cognitive-complexity
